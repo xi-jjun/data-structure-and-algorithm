@@ -42,7 +42,7 @@ public class CallByValueTest {
 
 		/**
 		 * 새롭게 생성된 객체를 new Foo 라고 하자. 해당 객체를 paramFoo 에 넣어주겠다.
-		 * new Foo 값 : 새롭게 생성된 객체의 주소
+		 * new Foo 값 : 새롭게 생성된 객체의 주소(0x4000 이라 하자)
 		 * new Foo 주소 : == paramFoo 의 주소 (0x1200)
 		 */
 		paramFoo = new Foo(99999, "Changed!");
