@@ -59,9 +59,9 @@ public class G1707 {
 			}
 
 			if (ok) {
-				bw.write("Yes\n");
+				bw.write("YES\n");
 			} else {
-				bw.write("No\n");
+				bw.write("NO\n");
 			}
 		}
 
