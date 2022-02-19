@@ -29,8 +29,8 @@ public class S2635 {
 			ai.add(k);
 			int a = N - k;
 			int index = 0;
-			while (a >= 0){
-				a = ai.get(index) - ai.get(index+1);
+			while (a >= 0) {
+				a = ai.get(index) - ai.get(index + 1);
 				if (a < 0) {
 					thisMaxLen = ai.size();
 					break;
@@ -52,7 +52,7 @@ public class S2635 {
 
 		bw.write(maxLen + "\n");
 		for (int i = 0; i < maxLen; i++) {
-			bw.write(answer.get(i)+" ");
+			bw.write(answer.get(i) + " ");
 		}
 
 		bw.flush();
