@@ -80,9 +80,10 @@ public class ListTest {
 		 * list3 = [1, 2, 1000, 4, 5]
 		 */
 
+
 		System.out.println("=== Arrays.asList Test ===");
 		List<Integer> asList = Arrays.asList(1, 2, 3 ,4);
-		asList.add(3000);
+//		asList.add(3000); // 오류 발생.
 		System.out.println("asList = " + asList);
 		/**
 		 * === Arrays.asList Test ===

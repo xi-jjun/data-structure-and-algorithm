@@ -18,6 +18,25 @@ public class SubListTest {
 		 */
 
 
+		System.out.println("=== subList modify Test ===");
+		List<Integer> list = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
+		List<Integer> subListOfList = list.subList(3, 7);
+		System.out.println("list = " + list);
+		System.out.println("subListOfList = " + subListOfList);
+		list.set(4, 1000);
+		System.out.println(" << modify list's index 4th (5=>1000) >> ");
+		System.out.println("list = " + list);
+		System.out.println("subListOfList = " + subListOfList);
+		/**
+		 * === subList modify Test ===
+		 * list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+		 * subListOfList = [4, 5, 6, 7]
+		 *  << modify list's index 4th (5=>1000) >>
+		 * list = [1, 2, 3, 4, 1000, 6, 7, 8, 9, 10]
+		 * subListOfList = [4, 1000, 6, 7]
+		 */
+
+
 		System.out.println("=== subList indexOf Test ===");
 		list1 = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 3, 2, 1, 0, 5, 7, 2, 4, 10));
 		System.out.println("list1 = " + list1);
@@ -54,7 +73,7 @@ public class SubListTest {
 		List<Integer> subListA = listA.subList(3, 7);
 		System.out.println("listA = " + listA);
 		System.out.println("subListA = " + subListA);
-//		listA.add(1000);
+//		listA.add(1000); // 에러 발생 원인
 		System.out.println("listA = " + listA);
 		System.out.println("subListA = " + subListA); // 여기서 에러 발생!
 		/**
