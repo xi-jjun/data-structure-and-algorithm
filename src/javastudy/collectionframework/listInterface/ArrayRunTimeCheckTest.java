@@ -1,5 +1,8 @@
 package javastudy.collectionframework.listInterface;
 
+/**
+ * 이 file 은 Java SE 8 version 으로 컴파일했습니다.
+ */
 public class ArrayRunTimeCheckTest {
 	/**
 	 * Array 는 Run time 에 실제 객체의 type 을 확인 후 사용해야 하는 번거로움이 있다고 배웠다.

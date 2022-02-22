@@ -28,11 +28,27 @@ public class ArrayListVsLinkedList {
 
 
 		System.out.println("=== === === === ===");
-		System.out.println("Data Select");
+		System.out.println("Data Selection Time (ns)");
 		long arrayListSelectAll = selectAll(arrayList);
 		long linkedListSelectAll = selectAll(linkedList);
 		System.out.println("arrayListSelectAll = " + arrayListSelectAll);
 		System.out.println("linkedListSelectAll = " + linkedListSelectAll);
+		/**
+		 * Data Sequence Adding Time (ns)
+		 *
+		 * arrayListAddingTime = 3450791
+		 * linkedListAddingTime = 2298000
+		 * === === === === ===
+		 * Data UnSequence Adding Time (ns)
+		 *
+		 * arrayListAddingAtZeroIndexTime = 500626583
+		 * linkedListAddingAtZeroIndexTime = 3019083
+		 * === === === === ===
+		 * Data Selection Time (ns)
+		 *
+		 * arrayListSelectAll = 1935541
+		 * linkedListSelectAll = 3955054875
+		 */
 	}
 
 	private static long selectAll(List<Integer> list) {
