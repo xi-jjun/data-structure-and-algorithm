@@ -6,12 +6,12 @@ import java.util.concurrent.TimeUnit;
 
 public class ThreadInterferenceTest {
 	public static void main(String[] args) throws InterruptedException {
-		ExecutorService executorService = Executors.newFixedThreadPool(10);
+		ExecutorService executorService = Executors.newFixedThreadPool(10); // Thread 10개 생성
 
 		Counter counter = new Counter();
 
 		for (int i = 0; i < 1000; i++) {
-			executorService.submit(() -> counter.increment());
+			executorService.submit(() -> counter.increment()); // counter.increment() 라는 행위를 multi-threading 으로 처리하겠다는 코드
 		}
 
 		executorService.shutdown();
