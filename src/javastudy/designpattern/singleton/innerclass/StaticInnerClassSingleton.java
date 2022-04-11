@@ -23,7 +23,7 @@ public class StaticInnerClassSingleton {
 		private static final StaticInnerClassSingleton INSTANCE = new StaticInnerClassSingleton();
 	}
 
-	public StaticInnerClassSingleton getInstance() {
+	public static StaticInnerClassSingleton getInstance() {
 		return Holder.INSTANCE; // 1. Holder class 호출.
 	}
 }
