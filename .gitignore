@@ -3,7 +3,7 @@ gradle/
 data-structure-and-algorithm.iml
 out/
 .DS_Store
-
+src/algorithm/codingtest/
 
 ### Java template
 # Compiled class file
