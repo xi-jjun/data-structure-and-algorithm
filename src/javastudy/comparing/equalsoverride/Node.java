@@ -1,6 +1,6 @@
 package javastudy.comparing.equalsoverride;
 
-public class Node {
+public class Node implements Comparable<Node> {
     String value;
     int code;
 
@@ -19,5 +19,10 @@ public class Node {
     public int hashCode() {
         return code;
 //        return super.hashCode();
+    }
+
+    @Override
+    public int compareTo(Node o) {
+        return this.value.compareTo(o.value);
     }
 }
