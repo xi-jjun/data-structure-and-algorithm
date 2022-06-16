@@ -11,7 +11,7 @@ import java.util.StringTokenizer;
 public class S2644 {
     static int n;
     static boolean ok = false;
-    static int parent, child, distance = 0;
+    static int parent, child, answer;
     static boolean[] visited;
     static Node[] nodes;
 
@@ -37,23 +37,29 @@ public class S2644 {
             nodes[c].children.add(nodes[p]);
         }
 
-        dfs(parent);
-        System.out.println(distance);
+        visited[parent] = true;
+        dfs(parent, 0);
+        if (ok) {
+            System.out.println(answer);
+        } else {
+            System.out.println("-1");
+        }
 
         br.close();
     }
 
-    private static void dfs(int node) {
+    private static void dfs(int node, int distance) {
         if (node == child || ok) {
+            if (!ok) answer = distance;
             ok = true;
             return;
         }
 
-        distance++;
-        visited[node] = true;
         for (Node next : nodes[node].children) {
             if (!visited[next.value]) {
-                dfs(next.value);
+                visited[next.value] = true;
+                dfs(next.value, distance + 1);
+                visited[next.value] = false;
             }
         }
     }
