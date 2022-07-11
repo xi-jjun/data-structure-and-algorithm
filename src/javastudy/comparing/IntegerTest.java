@@ -11,5 +11,9 @@ public class IntegerTest {
         System.out.println(a); // 1
         System.out.println(a == b); // true
         System.out.println(a == c); // false
+
+        Integer aa = 200; // -128~127 까지의 범위만 캐싱을 한다.
+        Integer bb = 200;
+        System.out.println("(aa==bb) = " + (aa == bb)); // false. 만약 aa 와 bb 가 100이었다면 true 가 나온다.
     }
 }
