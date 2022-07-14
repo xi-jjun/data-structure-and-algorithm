@@ -7,9 +7,11 @@ public class CompareToNull {
         System.out.println(option1.equals(Option.TODAY)); // true
         System.out.println(option2 == option1); // false
         System.out.println(option2 == null); // true
+        // System.out.println(option2.equals(option1)); // NullPointerException
+        System.out.println(option1.equals(option2)); // false
     }
 
-    static enum Option {
+    enum Option {
         TEMP, TODAY, WEEKLY;
     }
 }
