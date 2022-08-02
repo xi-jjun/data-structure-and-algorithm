@@ -18,7 +18,7 @@ public class S10816 {
             int num = Integer.parseInt(number);
             card.put(num, card.getOrDefault(num, 0) + 1);
         }
-        int _ = Integer.parseInt(br.readLine());
+        Integer.parseInt(br.readLine());
 
         String[] numbers2 = br.readLine().split(" ");
         for (String number2 : numbers2) {
