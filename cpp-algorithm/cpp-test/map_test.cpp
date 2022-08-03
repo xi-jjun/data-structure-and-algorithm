@@ -4,6 +4,19 @@
 
 using namespace std;
 
+void map_char_type_text() {
+/*
+	map<char, pair<char, char>> tree;
+	map['A'] = {'B', 'C'};
+	cout << "\nmap char type test\n";
+	for (auto node : tree) {
+		cout << node.first << "\n";
+		cout << node.second << "\n";
+	}
+// fail
+*/
+}
+
 int main() {
 	map<int, vector<int>> graph;
 	graph[1].push_back(123);
@@ -20,4 +33,15 @@ int main() {
 			cout << node << " ";
 		}
 	}
+	
+	cout << "\nmap test : 추가안한 key값에 대한 value는 어떻게 되는가?\n";
+	map<int, int> test;
+	test[1] = 123;
+	int a = test[99];
+	cout << test[1] << " " << a;
+	cout << "\n정답 : 0이 된다\n";
+
+	map_char_type_text();
+
+	return 0;
 }
