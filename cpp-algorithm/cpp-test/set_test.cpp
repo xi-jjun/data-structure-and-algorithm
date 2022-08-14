@@ -20,8 +20,29 @@ void check_is_present() {
 	cout << "5 is " << (checker.find(5) != checker.end() ? "presented!\n" : "NO EXISTED\n");	
 }
 
+void pair_set() {
+	cout << "pair set test\n";
+	set<pair<int, int>> pair_set;
+	pair_set.insert({1, 2});
+	pair_set.insert({1, 2});
+	pair_set.insert({1, 1});
+	pair_set.insert({1, 3});
+	pair_set.insert({2, 1});
+	pair_set.insert({3, 2});
+	pair_set.insert({3, 4});
+	pair_set.insert({3, 4});
+	pair_set.insert({2, 4});
+	pair_set.insert({3, 4});
+	pair_set.insert({3, 4});
+	
+	for (pair<int, int> p : pair_set) {
+		cout << p.first << ' ' << p.second << "\n";
+	}
+	cout << "pair set test end\n";
+}
 
 int main() {
+	pair_set();
 	for (auto number : arr) {
 		ds_set.insert(number);
 	}
