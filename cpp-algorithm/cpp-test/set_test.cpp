@@ -41,6 +41,20 @@ void pair_set() {
 	cout << "pair set test end\n";
 }
 
+void pair_in_pair_test() {
+	cout << "\npair in pair set test\n";
+	set<pair<pair<int, int>, pair<int, int>>> pair_pair_set;
+	pair_pair_set.insert({{1, 2}, {2, 3}});
+	pair_pair_set.insert({{1, 2}, {2, 3}});
+	pair_pair_set.insert({{2, 2}, {2, 3}});
+	pair_pair_set.insert({{1, 2}, {2, 3}});
+	pair_pair_set.insert(make_pair(make_pair(1, 2), make_pair(2, 3)));
+	pair_pair_set.insert({{1, 2}, {2, 4}});
+	cout << pair_pair_set.size() << "\n";
+	cout << "contain : " << (pair_pair_set.find({{1, 2}, {2, 3}}) != pair_pair_set.end()) << "\n";
+	cout << "\npair in pair set test END\n";
+}
+
 int main() {
 	pair_set();
 	for (auto number : arr) {
@@ -51,5 +65,6 @@ int main() {
 	}
 	
 	check_is_present();
+	pair_in_pair_test();
 	return 0;
 }
