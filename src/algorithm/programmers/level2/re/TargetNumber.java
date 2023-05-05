@@ -68,4 +68,15 @@ public class TargetNumber {
             return "index : " + index + ", acc : " + acc;
         }
     }
+
+    // goodSolution(numbers, 0, 0, target)
+    static int goodSolution(int[] numbers, int depth, int sum, int target) {
+        if (depth == numbers.length) {
+            if (sum == target) return 1;
+            return 0;
+        }
+
+        return goodSolution(numbers, depth + 1, sum + numbers[depth], target)
+                + goodSolution(numbers, depth + 1, sum - numbers[depth], target);
+    }
 }
