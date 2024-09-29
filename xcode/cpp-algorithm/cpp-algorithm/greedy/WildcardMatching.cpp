@@ -67,27 +67,27 @@ public:
 };
 
 // Main
-int main() {
-    Solution sol;
-    
-    vector<ExampleData> examples;
-    examples.push_back(ExampleData("abcdef", "abcdef", true));
-    examples.push_back(ExampleData("abcdef", "ab*def", true));
-    examples.push_back(ExampleData("abcdef", "a?c?ef", true));
-    examples.push_back(ExampleData("abcdef", "a?c?e", false));
-    examples.push_back(ExampleData("abcdef", "a*c*ef", true));
-    examples.push_back(ExampleData("abcdef", "a*c?ef", true));
-    examples.push_back(ExampleData("abcdef", "a?*?ef", true));
-    examples.push_back(ExampleData("abcdef", "a*?c?ef", true));
-    
-    for (const auto& exampleData : examples) {
-        string s = exampleData.inputs.first;
-        string p = exampleData.inputs.second;
-        bool expectedAnswer = exampleData.output;
-        
-        bool result = sol.isMatch(s, p);
-        if (result != expectedAnswer) {
-            cout << "WRONG ANSWER\n";
-        } else { cout << "ANSWER CORRECTED!\n"; }
-    }
-}
+//int main() {
+//    Solution sol;
+//    
+//    vector<ExampleData> examples;
+//    examples.push_back(ExampleData("abcdef", "abcdef", true));
+//    examples.push_back(ExampleData("abcdef", "ab*def", true));
+//    examples.push_back(ExampleData("abcdef", "a?c?ef", true));
+//    examples.push_back(ExampleData("abcdef", "a?c?e", false));
+//    examples.push_back(ExampleData("abcdef", "a*c*ef", true));
+//    examples.push_back(ExampleData("abcdef", "a*c?ef", true));
+//    examples.push_back(ExampleData("abcdef", "a?*?ef", true));
+//    examples.push_back(ExampleData("abcdef", "a*?c?ef", true));
+//    
+//    for (const auto& exampleData : examples) {
+//        string s = exampleData.inputs.first;
+//        string p = exampleData.inputs.second;
+//        bool expectedAnswer = exampleData.output;
+//        
+//        bool result = sol.isMatch(s, p);
+//        if (result != expectedAnswer) {
+//            cout << "WRONG ANSWER\n";
+//        } else { cout << "ANSWER CORRECTED!\n"; }
+//    }
+//}
